@@ -150,9 +150,16 @@ Demultiplexing is the reverse process of multiplexing. It involves extracting th
 
 ## 3. Performance
 - Why is important to keep track of the performance of a network?
+
+It is important to keep track of the performance of a network because the effectiveness of computations distributed over the network often depends directly on the efficiency with which the network delivers the computation's data. While it is important to first get the computation right, it is often necessary to design for performance in networking. Understanding the various factors that impact network performance can help ensure that the network is operating efficiently and effectively.
+
 - What are the main metrics we use to measure network performance?
+
+The main metrics used to measure network performance are bandwidth (throughput) and latency (delay). Bandwidth is the number of bits that can be transmitted over the network in a certain period of time, while latency is the time it takes for a packet to travel from the sender to the receiver. These two metrics are fundamental to understanding network performance and can be impacted by various factors such as object size, link speed, and RTT.
+
 - Give some examples of the challenges of using different metrics in high speed networks
 
+In high-speed networks, increasing bandwidth does not necessarily mean that latency improves at the same rate. This is because the speed of light, which determines the minimum time it takes for a packet to travel from the sender to the receiver, remains constant. As a result, high-speed networks can face challenges such as increased congestion, packet loss, and increased queuing delays. Additionally, the impact of latency and bandwidth on network performance can vary depending on the size of the object being transmitted, the link speed, and the RTT. For example, for a 1-byte object, latency remains almost exactly equal to the RTT, so that you cannot distinguish between a 1.5-Mbps network and a 10-Mbps network. However, for a 1-MB object, the RTT makes no difference—it is the link speed that dominates performance across the full range of RTT.
 
 ## Exercises
 1. Calculate the total time required to transfer a 1000-KB file in the following cases, assuming an RTT of 50 ms, a packet size of 1 KB data, and an initial 2 × RTT of “handshaking” before data is sent:
