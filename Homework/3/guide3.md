@@ -338,3 +338,16 @@ https://www.ibm.com/docs/es/networkmanager/4.2.0?topic=translation-private-addre
 ![net](./network.png)
 
 1. For the network given in figure above, show how the link-state algorithm builds the routing table for node D.
+
+| Step | Confirmed | Tentative      |
+|------|-----------|----------------|
+| 1    | (D,0,-)   |                |
+| 2    | (D,0,-)   | (E,2,E)(A,8,A) |
+| 3    | (D,0,-)(E,2,E)| (A,8,A)        |
+| 4    | (D,0,-)(E,2,E) | (B,4,E)(C,3,E) |
+| 5    | (D,0,-)(E,2,E)(B,4,E)(C,3,E) |                |
+| 6    | (D,0,-)(E,2,E)(B,4,E)(C,3,E) | (F,9,C)(A,6,C) |
+| 7    | (D,0,-)(E,2,E)(B,4,E)(C,3,E)(F,9,C)(A,6,C) |  |
+
+
+
